@@ -36,6 +36,8 @@ namespace Project01
             //Console.WriteLine("Yaş\t\t: {0}", b.Age);
 
             Console.WriteLine(b.GiveInfo());
+            b.ChangeAge(4);
+            Console.WriteLine(b.GiveInfo());
 
             Console.ReadKey();
         }
