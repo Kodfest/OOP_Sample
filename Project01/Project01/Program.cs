@@ -11,7 +11,17 @@ namespace Project01
         //Baby Nesnesinin Özellikleri
         public string Name;
         public string Surname;
-        public int Age;
+        public byte Age;
+
+        public string GiveInfo()
+        {
+            return string.Format("İsim Soyisim\t: {0} {1}\nYaş\t\t: {2}", Name, Surname, Age);
+        }
+
+        public void ChangeAge(byte age)
+        {
+            Age = age;
+        }
     }
     class Program
     {
@@ -21,9 +31,11 @@ namespace Project01
             b.Name = "Yavuz";
             b.Surname = "Gedik";
             b.Age = 3;
-            
-            Console.WriteLine("İsim Soyisim\t: {0} {1}", b.Name,b.Surname);
-            Console.WriteLine("Yaş\t\t: {0}", b.Age);
+
+            //Console.WriteLine("İsim Soyisim\t: {0} {1}", b.Name,b.Surname);
+            //Console.WriteLine("Yaş\t\t: {0}", b.Age);
+
+            Console.WriteLine(b.GiveInfo());
 
             Console.ReadKey();
         }
